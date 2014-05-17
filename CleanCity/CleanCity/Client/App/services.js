@@ -5,14 +5,15 @@ var noGarbageServices = angular.module('noGarbageServices', ['ngResource']);
 
 
 noGarbageServices.factory('User', ['$resource', function ($resource) {
-    return $resource('rest/:method', {}, {
-        getUserInfo: { method: 'POST', params: { method: 'get_user_info' } }
+    return $resource('rest/user', {}, {
+        getUserInfo: { method: 'GET'},
+        updateUserInfo: { method: 'POST'}
     });
 }]);
 
 noGarbageServices.factory('Garbage', ['$resource', function ($resource) {
-    return $resource('rest/:action', {}, {
-        postGarbageLocation: { method: 'POST', params: { method: 'post_garbage_location' } },
-        getGarbageLocations: { method: 'POST', params: { method: 'get_garbage_locations' } }
+    return $resource('rest/garbage', {}, {
+        postGarbageLocation: { method: 'PUT'},
+        getGarbageLocations: { method: 'POST'}
     });
 }]);
