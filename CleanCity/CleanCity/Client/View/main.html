@@ -1,8 +1,8 @@
-﻿<div ng-controller="MainCtrl">
+﻿<div ng-controller="MainCtrl" style="height:100%;">
     <google-map center="map.center" id="map" zoom="map.zoom">
     
 
-        <marker ng-repeat="m in myMarkers" coords="m.location" click="onMarkerClicked(m)">
+        <marker ng-repeat="m in garbageMarkers" coords="m.location" click="onMarkerClicked(m)">
             <window ng-cloak show="m.showWindow" isiconvisibleonclick="false" options="m.windowOptions">
             </window>
         </marker>
