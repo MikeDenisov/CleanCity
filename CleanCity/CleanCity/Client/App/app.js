@@ -6,6 +6,7 @@ var app = angular.module('noGarbage', [
     'ngRoute',          // routing
     'ngSanitize',       // sanitizes html bindings (ex: sidebar.js)
     'ngResource',       // resource :)
+    'google-maps',
 
     'noGarbageControllers',
     'noGarbageServices',
@@ -26,7 +27,7 @@ app.run(['$route', function ($route) {
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.
     when('/user', {
-        templateUrl: 'Client/view/user.html',
+        templateUrl: 'Client/view/userInfo.html',
         controller: 'UserCtrl'
     }).
 

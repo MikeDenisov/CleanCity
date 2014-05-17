@@ -6,7 +6,7 @@ var noGarbageControllers = angular.module('noGarbageControllers', []);
 
 
 
-noGarbageControllers.controller('UsersCtrl', ['$scope', 'User',
+noGarbageControllers.controller('UserCtrl', ['$scope', 'User',
 function ($scope, User) {
     $scope.myInfo = User.getUserInfo();
 }]);
@@ -16,9 +16,18 @@ function ($scope, User) {
     $scope.myInfo = User.getUserInfo();
 }]);
 
-noGarbageControllers.controller('MainCtrl', ['$scope', 'User',
-function ($scope, User) {
-    $scope.myInfo = User.getUserInfo();
+noGarbageControllers.controller('MainCtrl', ['$scope', 'Garbage',
+function ($scope, Garbage) {
+    $scope.myInfo = Garbage.getGarbageLocations();
+
+
+    $scope.map = {
+        center: {
+            latitude: 45,
+            longitude: -73
+        },
+        zoom: 8
+    };
 }]);
 
 
