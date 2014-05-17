@@ -1,7 +1,6 @@
-﻿(function () {
-    'use strict';
+﻿'use strict';
 
-    var app = angular.module('app', [
+    var app = angular.module('noGarbage', [
         // Angular modules 
         'ngAnimate',        // animations
         'ngRoute',          // routing
@@ -9,15 +8,35 @@
         'ngResource',       // resource :)
 
         // Custom modules 
-        'common',           // common functions, logger, spinner
-        'common.bootstrap', // bootstrap dialog wrapper functions
+       // 'common',           // common functions, logger, spinner
+       // 'common.bootstrap', // bootstrap dialog wrapper functions
 
         // 3rd Party Modules
-        'ui.bootstrap'      // ui-bootstrap (ex: carousel, pagination, dialog)
+       // 'ui.bootstrap'      // ui-bootstrap (ex: carousel, pagination, dialog)
     ]);
 
     // Handle routing errors and success events
     app.run(['$route', function ($route) {
         // Include $route to kick start the router.
     }]);
-})();
+
+    app.config(['$routeProvider', function ($routeProvider) {
+        $routeProvider.
+        when('/users', {
+            templateUrl: 'view/users.html',
+            controller: 'UsersCtrl'
+        }).
+
+        when('/notFound', {
+            templateUrl: 'view/notFound.html'
+        }).
+        when('/error', {
+            templateUrl: 'view/error.html'
+        }).
+        when('/', {
+            templateUrl: 'view/main.html'
+        }).
+        otherwise({
+            redirectTo: '/notFound'
+        });
+    }]);
