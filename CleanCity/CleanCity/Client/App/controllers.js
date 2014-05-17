@@ -25,37 +25,37 @@ function ($scope, Garbage) {
           "longitude": 30.523333
     };
 
-    $scope.markerClick = function () {
-        alert("as");
-    };
+    //$scope.markerClick = function () {
+    //    alert("as");
+    //};
 
-    $scope.mapPolygons = [{
-        path: [{
-            latitude: 32.22,
-            longitude: 34.33
-        },
-            {
-                latitude: 0.22,
-                longitude: 0.33
-            },
-            {
-                latitude: 32.22,
-                longitude: 35.33
-            },
-            {
-                latitude: 12.22,
-                longitude: 12.33
-            }],
-        fill: {
-            color: "#00bbf2",
-            opacity: 0.8
-        },
-        stroke: {
-            color: "#cacaca",
-            weight: 5,
-            opacity: 1.0
-        }
-    }];
+    //$scope.mapPolygons = [{
+    //    path: [{
+    //        latitude: 32.22,
+    //        longitude: 34.33
+    //    },
+    //        {
+    //            latitude: 0.22,
+    //            longitude: 0.33
+    //        },
+    //        {
+    //            latitude: 32.22,
+    //            longitude: 35.33
+    //        },
+    //        {
+    //            latitude: 12.22,
+    //            longitude: 12.33
+    //        }],
+    //    fill: {
+    //        color: "#00bbf2",
+    //        opacity: 0.8
+    //    },
+    //    stroke: {
+    //        color: "#cacaca",
+    //        weight: 5,
+    //        opacity: 1.0
+    //    }
+    //}];
 
 
     $scope.myMarkers = [
@@ -69,16 +69,13 @@ function ($scope, Garbage) {
       {
           "latitude": 50.41,
           "longitude": 30.423333
-      },
+      }
     ];
 
     $scope.map = {
         center: {
             latitude: 50.45,
             longitude: 30.523333
-        },
-        bounds: {
-
         },
         zoom: 12
     };

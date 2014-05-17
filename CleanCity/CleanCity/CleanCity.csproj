@@ -131,9 +131,7 @@
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Client\css\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup />
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -176,7 +174,6 @@
       <DependentUpon>CleanCityDB.mdf</DependentUpon>
     </Content>
     <Content Include="Client\App\app.js" />
-    <Content Include="Client\app\app.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Client\app\controllers.js" />
     <Content Include="Client\app\services.js" />
@@ -185,9 +182,12 @@
     <Content Include="Client\content\bootstrap.css" />
     <Content Include="Client\content\bootstrap.min.css" />
     <Content Include="Client\content\toastr.css">
-      <DependentUpon>toastr.scss</DependentUpon>
+      <DependentUpon>toastr.less</DependentUpon>
     </Content>
     <Content Include="Client\content\toastr.min.css" />
+    <Content Include="Client\css\font-awesome.css" />
+    <Content Include="Client\css\fonts\fontawesome-webfont.svg" />
+    <Content Include="Client\css\main.css" />
     <Content Include="Client\img\avatar.jpg" />
     <Content Include="Client\js\main.js" />
     <Content Include="Client\tmp\index.html" />
@@ -498,6 +498,10 @@
     <Content Include="Client\content\toastr.css.map">
       <DependentUpon>toastr.css</DependentUpon>
     </Content>
+    <Content Include="Client\css\fonts\fontawesome-webfont.eot" />
+    <Content Include="Client\css\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Client\css\fonts\fontawesome-webfont.woff" />
+    <Content Include="Client\css\fonts\FontAwesome.otf" />
     <None Include="Client\scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Client\scripts\jquery-2.1.1.js" />
     <Content Include="Client\scripts\jquery-2.1.1.min.js" />
