@@ -4245,7 +4245,7 @@ function () {
     var e, t, n, r, i;
     if (!Offline) throw new Error("Offline simulate brought in without offline.js");
     for (i = ["up", "down"], n = 0, r = i.length; r > n; n++) e = i[n], (document.querySelector("script[data-simulate='" + e + "']") || localStorage.OFFLINE_SIMULATE === e) && (null == Offline.options && (Offline.options = {}), null == (t = Offline.options).checks && (t.checks = {}), Offline.options.checks.active = e)
-}.call(this),
+}.call(this);
 
 /*
 function () {
