@@ -20,13 +20,31 @@ noGarbageControllers.controller('MainCtrl', ['$scope', 'Garbage',
 function ($scope, Garbage) {
     $scope.myInfo = Garbage.getGarbageLocations();
 
+    $scope.testMarker = {
+          "latitude": 50.45,
+          "longitude": 30.523333
+      };
+
+    $scope.myMarkers = [
+      {
+          "latitude": 50.45,
+          "longitude": 30.523333
+      },
+      {
+          "latitude": 50.25,
+          "longitude": 30.423333
+      },
+    ];
 
     $scope.map = {
         center: {
-            latitude: 45,
-            longitude: -73
+            latitude: 50.45,
+            longitude: 30.523333
         },
-        zoom: 8
+        bounds: {
+
+        },
+        zoom: 12
     };
 }]);
 
