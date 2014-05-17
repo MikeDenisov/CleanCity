@@ -15,17 +15,17 @@
 
 
     <!-- Vendor Scripts -->
-    <script src="Scripts/jquery-2.1.1.js"></script>
-    <script src="Scripts/angular.js"></script>
-    <script src="Scripts/angular-animate.js"></script>
-    <script src="Scripts/angular-route.js"></script>
-    <script src="Scripts/angular-sanitize.js"></script>
-    <script src="Scripts/angular-resource.js"></script>
-    <script src="Scripts/bootstrap.js"></script>
-    <script src="Scripts/toastr.js"></script>
+    <script src="Client/Scripts/jquery-2.1.1.js"></script>
+    <script src="Client/Scripts/angular.js"></script>
+    <script src="Client/Scripts/angular-animate.js"></script>
+    <script src="Client/Scripts/angular-route.js"></script>
+    <script src="Client/Scripts/angular-sanitize.js"></script>
+    <script src="Client/Scripts/angular-resource.js"></script>
+    <script src="Client/Scripts/bootstrap.js"></script>
+    <script src="Client/Scripts/toastr.js"></script>
 
 
-    <script src="App/app.js" type="text/javascript"></script>
+    <script src="Client/App/app.js" type="text/javascript"></script>
 
     <script>
         // Must be first. IE10 mobile viewport fix
@@ -37,13 +37,15 @@
         }
     </script>
 
-    <link href="content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Client/Content/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body ng-app="noGarbage">
     Welcome to clean city!
 
     <span data-cc-scroll-to-top></span>
 
+
+    <div ng-view=""></div>
 
     
 
