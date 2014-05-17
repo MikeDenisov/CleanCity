@@ -1,4 +1,14 @@
 ﻿<div ng-controller="MainCtrl">
-    <google-map center="map.center" id="map" zoom="map.zoom"></google-map>
+    <google-map center="map.center" id="map" zoom="map.zoom">
+    
+
+        <marker ng-repeat="m in myMarkers" coords="m" icon="m.icon" click="onMarkerClicked(m)">
+            <window ng-cloak show="m.showWindow" isiconvisibleonclick="false" options="m.windowOptions">
+            </window>
+        </marker>
+
+        <polygon ng-repeat="poly in mapPolygons" path="poly.path" fill="poly.fill" stroke="poly.stroke"></polygon>
+
+    </google-map>
 </div>
 

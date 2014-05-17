@@ -6,7 +6,7 @@ var app = angular.module('noGarbage', [
     'ngRoute',          // routing
     'ngSanitize',       // sanitizes html bindings (ex: sidebar.js)
     'ngResource',       // resource :)
-    'google-maps',
+    'google-maps',      // angular google maps api
 
     'noGarbageControllers',
     'noGarbageServices',
@@ -24,7 +24,9 @@ app.run(['$route', function ($route) {
     // Include $route to kick start the router.
 }]);
 
-app.config(['$routeProvider', function ($routeProvider) {
+app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
+    $httpProvider.defaults.headers.common = { "AccessToken": "aaaaaaaaaaaaaaaa Token" };
+
     $routeProvider.
     when('/user', {
         templateUrl: 'Client/view/userInfo.html',
