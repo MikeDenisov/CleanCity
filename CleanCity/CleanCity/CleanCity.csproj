@@ -190,6 +190,8 @@
     <Content Include="Client\css\main.css" />
     <Content Include="Client\img\avatar.jpg" />
     <Content Include="Client\js\main.js" />
+    <Content Include="Client\scripts\angular-google-maps.min.js" />
+    <Content Include="Client\scripts\underscore-min.js" />
     <Content Include="Client\tmp\index.html" />
     <Content Include="Client\view\error.html" />
     <Content Include="Client\view\main.html" />

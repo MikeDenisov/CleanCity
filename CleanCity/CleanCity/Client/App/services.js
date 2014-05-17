@@ -5,8 +5,8 @@ var noGarbageServices = angular.module('noGarbageServices', ['ngResource']);
 
 
 noGarbageServices.factory('User', ['$resource', function ($resource) {
-    return $resource('rest/user', {}, {
-        getUserInfo: { method: 'GET'},
+    return $resource('rest/user/:id', {}, {
+        getUserInfo: { method: 'GET', params : {} },
         updateUserInfo: { method: 'POST'}
     });
 }]);
