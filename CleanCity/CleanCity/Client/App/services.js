@@ -12,8 +12,9 @@ noGarbageServices.factory('User', ['$resource', function ($resource) {
 }]);
 
 noGarbageServices.factory('Garbage', ['$resource', function ($resource) {
-    return $resource('api/garbagePoints', {}, {
+    return $resource('api/garbagePoints/:id', {id:'@id'}, {
         postGarbageLocation: { method: 'PUT'},
-        getGarbageLocations: { method: 'POST'}
+        getGarbageLocation: { method: 'GET' },
+        getGarbageLocationList: { method: 'GET', isArray: true}
     });
 }]);
