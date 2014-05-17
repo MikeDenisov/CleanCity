@@ -25,7 +25,11 @@ app.run(['$route', function ($route) {
 }]);
 
 app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
-    $httpProvider.defaults.headers.common = { "AccessToken": "aaaaaaaaaaaaaaaa Token" };
+    //$httpProvider.defaults.headers.common = { "AccessToken": "aaaaaaaaaaaaaaaa Token", "Content-Type": "application/json; charset=utf-8;" };
+
+    $httpProvider.defaults.headers.common["AccessToken"] = "aaaaaaaaaaaa344aaaa Token";
+    $httpProvider.defaults.headers.common["Content-Type"] =  "application/json; charset=utf-8";
+
 
     $routeProvider.
     when('/user', {
