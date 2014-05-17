@@ -131,15 +131,10 @@
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Client\css\" />
-    <Folder Include="Client\js\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
-    <Folder Include="NewFolder1\" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -193,6 +188,9 @@
       <DependentUpon>toastr.scss</DependentUpon>
     </Content>
     <Content Include="Client\content\toastr.min.css" />
+    <Content Include="Client\img\avatar.jpg" />
+    <Content Include="Client\js\main.js" />
+    <Content Include="Client\tmp\index.html" />
     <Content Include="Client\view\error.html" />
     <Content Include="Client\view\main.html" />
     <Content Include="Client\view\notFound.html" />
