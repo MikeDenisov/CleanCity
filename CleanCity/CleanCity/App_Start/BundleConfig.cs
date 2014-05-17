@@ -9,20 +9,20 @@ namespace CleanCity
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Client/Scripts/jquery-{version}.js"));
+                        "~/Client/sripts/jquery-{version}.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Client/Scripts/modernizr-*"));
+                        "~/Client/scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Client/Scripts/bootstrap.js",
-                      "~/Client/Scripts/respond.js"));
+                      "~/Client/scripts/bootstrap.js",
+                      "~/Client/scripts/respond.js"));
 
-            bundles.Add(new StyleBundle("~/Client/Content/css").Include(
-                      "~/Client/Content/bootstrap.css",
-                      "~/Client/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Client/content/css").Include(
+                      "~/Client/content/bootstrap.css",
+                      "~/Client/content/site.css"));
         }
     }
 }
