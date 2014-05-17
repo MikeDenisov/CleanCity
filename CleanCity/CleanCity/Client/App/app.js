@@ -1,11 +1,14 @@
 ﻿'use strict';
 
-    var app = angular.module('noGarbage', [
-        // Angular modules 
-        'ngAnimate',        // animations
-        'ngRoute',          // routing
-        'ngSanitize',       // sanitizes html bindings (ex: sidebar.js)
-        'ngResource',       // resource :)
+var app = angular.module('noGarbage', [
+    // Angular modules 
+    'ngAnimate',        // animations
+    'ngRoute',          // routing
+    'ngSanitize',       // sanitizes html bindings (ex: sidebar.js)
+    'ngResource',       // resource :)
+
+    'noGarbageControllers',
+    'noGarbageServices',
 
         // Custom modules 
        // 'common',           // common functions, logger, spinner
@@ -34,7 +37,7 @@
             templateUrl: 'view/error.html'
         }).
         when('/', {
-            templateUrl: 'view/main.html'
+            templateUrl: 'Client/View/main.html'
         }).
         otherwise({
             redirectTo: '/notFound'

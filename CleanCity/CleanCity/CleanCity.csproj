@@ -113,10 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Client\App\controllers\" />
-    <Folder Include="Client\App\directives\" />
-    <Folder Include="Client\App\services\" />
-    <Folder Include="Client\App\views\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
     <Folder Include="NewFolder1\" />
@@ -148,6 +144,8 @@
   <ItemGroup>
     <Content Include="Client\App\app.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Client\App\controllers.js" />
+    <Content Include="Client\App\services.js" />
     <Content Include="Client\Content\bootstrap-theme.css" />
     <Content Include="Client\Content\bootstrap-theme.min.css" />
     <Content Include="Client\Content\bootstrap.css" />
@@ -156,6 +154,7 @@
       <DependentUpon>toastr.scss</DependentUpon>
     </Content>
     <Content Include="Client\Content\toastr.min.css" />
+    <Content Include="Client\View\main.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
