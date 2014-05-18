@@ -175,14 +175,19 @@
     </Content>
     <Content Include="Client\App\app.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Client\App\controllers\fileUploadController.js" />
     <Content Include="Client\App\controllers\mainController.js" />
     <Content Include="Client\App\controllers\mapController.js" />
+    <Content Include="Client\App\controllers\postController.js" />
     <Content Include="Client\App\controllers\userController.js" />
     <Content Include="Client\App\directives\headerNavigation.js" />
     <Content Include="Client\App\directives\mainNavigation.js" />
     <Content Include="Client\App\directives\search.js" />
     <Content Include="Client\App\directives\userBar.js" />
     <Content Include="Client\App\services\services.js" />
+    <Content Include="Client\app\controllers.js" />
+    <Content Include="Client\App\localize.js" />
+    <Content Include="Client\app\services.js" />
     <Content Include="Client\content\bootstrap-theme.css" />
     <Content Include="Client\content\bootstrap-theme.min.css" />
     <Content Include="Client\content\bootstrap.css" />
@@ -195,10 +200,12 @@
     <Content Include="Client\css\fonts\fontawesome-webfont.svg" />
     <Content Include="Client\css\main.css" />
     <Content Include="Client\img\avatar.jpg" />
+    <Content Include="Client\js\i18n\lclz.default.js" />
     <Content Include="Client\js\main.js" />
     <Content Include="Client\scripts\angular-google-maps.min.js" />
     <Content Include="Client\scripts\underscore-min.js" />
     <Content Include="Client\tmp\index.html" />
+    <Content Include="Client\view\addPoint.html" />
     <Content Include="Client\view\error.html" />
     <Content Include="Client\view\main.html" />
     <Content Include="Client\view\headerNavigation.html" />
