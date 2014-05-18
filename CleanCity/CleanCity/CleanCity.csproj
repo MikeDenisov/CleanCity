@@ -169,9 +169,12 @@
     <Compile Include="Types\GpsLocation.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\CleanCityDB.mdf" />
+    <Content Include="App_Data\CleanCityDB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Data\CleanCityDB_log.ldf">
       <DependentUpon>CleanCityDB.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Client\App\app.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -185,9 +188,7 @@
     <Content Include="Client\App\directives\search.js" />
     <Content Include="Client\App\directives\userBar.js" />
     <Content Include="Client\App\services\services.js" />
-    <Content Include="Client\app\controllers.js" />
     <Content Include="Client\App\localize.js" />
-    <Content Include="Client\app\services.js" />
     <Content Include="Client\content\bootstrap-theme.css" />
     <Content Include="Client\content\bootstrap-theme.min.css" />
     <Content Include="Client\content\bootstrap.css" />
