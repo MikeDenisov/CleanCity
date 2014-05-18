@@ -18,6 +18,9 @@
             //  }
             //];
 
+            $scope.smallSidebar = true;
+            $scope.showAbout = false;
+
             $scope.map = {
                 center: {
                     latitude: 50.45,

@@ -1,14 +1,16 @@
-﻿<div ng-controller="MainCtrl" style="height:100%; width:100%;">
-    <google-map center="map.center" id="map" zoom="map.zoom">
-    
-
-        <marker ng-repeat="m in garbageMarkers" coords="m.location" click="onMarkerClicked(m)">
-            <window ng-cloak show="m.showWindow" isiconvisibleonclick="false" options="m.windowOptions">
-            </window>
-        </marker>
-
-        <!--<polygon ng-repeat="poly in mapPolygons" path="poly.path" fill="poly.fill" stroke="poly.stroke"></polygon>-->
-
-    </google-map>
-</div>
-
+﻿<aside  main-navigation class="sidebar canvas-left bg-dark"></aside>
+<section class="main-content">
+  <div class="content-wrap no-padding">
+    <div id="my-content">
+      <div ng-controller="MainCtrl" style="height:100%; width:100%;">
+        <google-map center="map.center" id="map" zoom="map.zoom">
+            <marker ng-repeat="m in garbageMarkers" coords="m.location" click="onMarkerClicked(m)">
+              <window ng-cloak show="m.showWindow" isiconvisibleonclick="false" options="m.windowOptions">
+              </window>
+            </marker>
+          <!--<polygon ng-repeat="poly in mapPolygons" path="poly.path" fill="poly.fill" stroke="poly.stroke"></polygon>-->
+        </google-map>
+      </div>
+    </div>
+  </div>
+</section>

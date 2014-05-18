@@ -22,9 +22,9 @@
 .event-date, .event-location{font-size: 15px}
 .fa {color:#aaaaaa;}
 
-.list-group .active, .list-group-item:hover{background-color: #4e4e4e;}
+.list-group .active, .list-group-item:hover{background-color: #8a8989;}
 
-.list-group .active a, .list-group-item:hover a{color:white;}
+.list-group .active a, .list-group-item:hover a, .list-group-item:hover .event-date, .active .event-date{color:white;}
 
 .condition li img{height:100px;}
 .condition li{display:table-cell;padding:2px;}
