@@ -4644,8 +4644,6 @@ img {
     position: relative;
 }
 .header .brand img {
-    float: left;
-    height: 20px;
 }
 @media (max-width:767px) {
     .header {
