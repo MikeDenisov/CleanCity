@@ -70,4 +70,3 @@ C:\Users\Mike\Documents\GitHub\CleanCity\CleanCity\CleanCity\bin\System.Web.WebP
 C:\Users\Mike\Documents\GitHub\CleanCity\CleanCity\CleanCity\bin\Antlr3.Runtime.pdb
 C:\Users\Mike\Documents\GitHub\CleanCity\CleanCity\CleanCity\obj\Debug\CleanCity.dll
 C:\Users\Mike\Documents\GitHub\CleanCity\CleanCity\CleanCity\obj\Debug\CleanCity.pdb
-C:\Users\Mike\Documents\GitHub\CleanCity\CleanCity\CleanCity\obj\Debug\CleanCity.csprojResolveAssemblyReference.cache

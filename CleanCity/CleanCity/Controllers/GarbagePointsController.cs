@@ -33,7 +33,7 @@ namespace CleanCity.Controllers
         [Route("")]
         public IEnumerable<GarbagePoint> GetGarbagePoints()
         {
-            return _repository.All().ToList();
+            return _repository.All();
         }
 
         [HttpGet]

@@ -15,7 +15,7 @@
     <AssemblyName>CleanCity</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -169,15 +169,26 @@
     <Compile Include="Types\GpsLocation.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\CleanCityDB.mdf" />
+    <Content Include="App_Data\CleanCityDB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Data\CleanCityDB_log.ldf">
       <DependentUpon>CleanCityDB.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Client\App\app.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
-    <Content Include="Client\app\controllers.js" />
+    <Content Include="Client\App\controllers\fileUploadController.js" />
+    <Content Include="Client\App\controllers\mainController.js" />
+    <Content Include="Client\App\controllers\mapController.js" />
+    <Content Include="Client\App\controllers\postController.js" />
+    <Content Include="Client\App\controllers\userController.js" />
+    <Content Include="Client\App\directives\headerNavigation.js" />
+    <Content Include="Client\App\directives\mainNavigation.js" />
+    <Content Include="Client\App\directives\search.js" />
+    <Content Include="Client\App\directives\userBar.js" />
+    <Content Include="Client\App\services\services.js" />
     <Content Include="Client\App\localize.js" />
-    <Content Include="Client\app\services.js" />
     <Content Include="Client\content\bootstrap-theme.css" />
     <Content Include="Client\content\bootstrap-theme.min.css" />
     <Content Include="Client\content\bootstrap.css" />
@@ -198,7 +209,11 @@
     <Content Include="Client\view\addPoint.html" />
     <Content Include="Client\view\error.html" />
     <Content Include="Client\view\main.html" />
+    <Content Include="Client\view\headerNavigation.html" />
+    <Content Include="Client\view\mainNavigation.html" />
     <Content Include="Client\view\notFound.html" />
+    <Content Include="Client\view\search.html" />
+    <Content Include="Client\view\userBar.html" />
     <Content Include="Client\view\userInfo.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -553,7 +568,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>8731</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:8427/</IISUrl>
+          <IISUrl>http://localhost/CleanCity</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

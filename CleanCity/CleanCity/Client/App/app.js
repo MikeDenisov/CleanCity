@@ -11,7 +11,7 @@ var app = angular
     'localization',
 
     'noGarbageControllers',
-    'noGarbageServices',
+    'noGarbageServices'
 
         // Custom modules 
        // 'common',           // common functions, logger, spinner
@@ -31,7 +31,9 @@ app.constant("routes", {
 });
 
 app.config(['$routeProvider', '$httpProvider', 'routes', function ($routeProvider, $httpProvider, routes) {
-    //$httpProvider.defaults.headers.common = { "AccessToken": "aaaaaaaaaaaaaaaa Token" };
+    //
+    //$httpProvider.defaults.headers.common = { "AccessToken": "Token" };
+    //
     var pathToIncs = 'Client/view/';
 
     $routeProvider
