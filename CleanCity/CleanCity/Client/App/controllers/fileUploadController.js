@@ -1,5 +1,4 @@
-﻿angular.module('noGarbageControllers', [])
-    .controller('FileUploadController', function ($scope) {
+﻿noGarbageControllers.controller('FileUploadController', function ($scope) {
 
     $scope.fileFormat = "xls";
     $scope.startImport = false;

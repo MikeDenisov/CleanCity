@@ -18,5 +18,20 @@
         "key": "add",
         "value": "Добавить",
         "description": "On"
+    },
+    {
+        "key": "description",
+        "value": "Описание",
+        "description": "On"
+    },
+    {
+        "key": "enter_description",
+        "value": "Введите описание",
+        "description": "On"
+    },
+    {
+        "key": "location",
+        "value": "Местоположение",
+        "description": "On"
     }
 ]

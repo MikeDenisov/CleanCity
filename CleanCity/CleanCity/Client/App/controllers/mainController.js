@@ -1,5 +1,4 @@
-﻿angular.module('noGarbageControllers', [])
-    .controller('MainCtrl', [
+﻿noGarbageControllers.controller('MainCtrl', [
         '$scope', 'Garbage',
         function ($scope, Garbage) {
             $scope.garbageMarkers = Garbage.getGarbageLocationList();

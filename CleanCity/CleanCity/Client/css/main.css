@@ -1,16 +1,38 @@
+#my-content { height: 100%; display: block }
+
 #map img { max-width:none; }
 
-#my-content { height: 100%; display: block }
+.angular-google-map-container { height: 100%;display: block }
 
 .angular-google-map,
 .angular-google-map-container {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
 }
 
+.event-date{color:grey;}
+
+.event-place{color:blue;}
+.event-footer button{margin: 0 5px;}
+.event-footer{margin-top: 15px !important}
+.event-footer p{margin-top: 5px;}
+.sidebar-300{border-left: 0px !important;}
+.sidebar-300 a p{font-size: 14px;padding-left: 25px}
+.list-group-item i{padding-right: 10px}
+.event-date, .event-location{font-size: 15px}
+.fa {color:#aaaaaa;}
+
+.list-group .active, .list-group-item:hover{background-color: #4e4e4e;}
+
+.list-group .active a, .list-group-item:hover a{color:white;}
+
+.condition li img{height:100px;}
+.condition li{display:table-cell;padding:2px;}
 
 
 .angular-google-map-container { height:100%; width:100%; position:absolute; top:0; left:0; }
+.no-outline{  border: 0px solid rgba(0, 0, 0, 0) !important;}
+
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400, 300, 600, 700, 800);
     html {
@@ -3520,7 +3542,7 @@ to {
     display: block;
     padding: 10px 15px;
     margin-bottom: -1px;
-    background-color: #fff;
+    background-color: #f9f9f9;
     border: 1px solid #ddd;
 }
 .list-group-item:first-child {
@@ -4605,7 +4627,7 @@ img {
     html, body {
     height: 100%}
 }.header {
-    min-height: 50px;
+    min-height: 45px;
     position: relative;
     margin: 0;
     z-index: 1000;
@@ -4988,7 +5010,7 @@ aside footer .toggle-sidebar i {
 }
 }@media screen and (min-width:768px) {
     .sidebar-300 {
-    width: 300px;
+    width: 370px;
 }
 .sidebar-250 {
     width: 250px;
@@ -5106,7 +5128,7 @@ aside footer .toggle-sidebar i {
     overflow-y: auto;
 }
 .header~.content-wrap {
-    top: 50px;
+    top: 45px;
 }
 .content-wrap.bottom-50 {
     bottom: 50px;
@@ -8195,6 +8217,7 @@ canvas {
 .bg-danger .main-navigation>ul>li>a, .app:not(.small-sidebar) .collapsible.bg-danger .main-navigation>ul>li>ul>li>a, .bg-danger footer a, .bg-danger>a {
     color: #ffcfca;
 }
+.bg-grey{background-color: #f9f9f9}
 .bg-white, .bg-white footer {
     background-color: #fff;
     color: #4d4d4d;
@@ -8905,3 +8928,5 @@ canvas {
 .offline-ui.offline-ui-down.offline-ui-reconnect-failed-2s .offline-ui-content:before {
     content: "Connection attempt failed.";
 }
+
+
