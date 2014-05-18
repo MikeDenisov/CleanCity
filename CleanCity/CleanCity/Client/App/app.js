@@ -45,3 +45,5 @@ app.config(['$routeProvider', '$httpProvider', 'routes', function ($routeProvide
         .when(routes.main, { templateUrl: pathToIncs + 'main.html' })
         .otherwise({ redirectTo: routes.notFound });
 }]);
+
+var noGarbageControllers = angular.module('noGarbageControllers', []);

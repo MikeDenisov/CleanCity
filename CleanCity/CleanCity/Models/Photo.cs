@@ -17,5 +17,9 @@ namespace CleanCity.Models
         public GarbagePoint Target { get; set; }
         public string Description { get; set; }
         public string Url { get; set; }
+        [IgnoreDataMember]
+        public string ActualFileName { get; set; }
+        [IgnoreDataMember]
+        public string FilePath { get; set; }        
     }
 }
