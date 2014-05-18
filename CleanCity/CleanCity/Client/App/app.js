@@ -8,6 +8,7 @@ var app = angular
     'ngSanitize',       // sanitizes html bindings (ex: sidebar.js)
     'ngResource',       // resource :)
     'google-maps',      // angular google maps api
+    'localization',
 
     'noGarbageControllers',
     'noGarbageServices',
@@ -22,6 +23,7 @@ var app = angular
 
 app.constant("routes", {
     user: "/user",
+    post: "/post",
     events: "/events",
     notFound: "/notFound",
     error: "/error",
@@ -33,6 +35,7 @@ app.config(['$routeProvider', '$httpProvider', 'routes', function ($routeProvide
     var pathToIncs = 'Client/view/';
 
     $routeProvider
+        .when(routes.post, { templateUrl: pathToIncs + 'addPoint.html', controller: 'PostCtrl' })
         .when(routes.user, { templateUrl: pathToIncs + 'userInfo.html', controller: 'UserCtrl' })
         .when(routes.events, { templateUrl: pathToIncs + 'events.html', controller: 'EventsCtrl' })
         .when(routes.notFound, { templateUrl: pathToIncs + 'notFound.html' })
