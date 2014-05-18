@@ -11,7 +11,8 @@ var app = angular
     'localization',
 
     'noGarbageControllers',
-    'noGarbageServices'
+    'noGarbageServices',
+    'angularFileUpload'
 
         // Custom modules 
        // 'common',           // common functions, logger, spinner

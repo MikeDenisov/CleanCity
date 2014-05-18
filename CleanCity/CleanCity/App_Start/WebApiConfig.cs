@@ -16,14 +16,23 @@ namespace CleanCity
             // Web API routes           
             config.MapHttpAttributeRoutes();
 
-            config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
+            //config.Routes.MapHttpRoute(
+            //    name: "DefaultApi",
+            //    routeTemplate: "api/{controller}/{id}",
+            //    defaults: new { id = RouteParameter.Optional }
+            //);
 
             var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
             jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+
+            var matches = config.Formatters
+                            .Where(f => f.SupportedMediaTypes
+                                         .Where(m => m.MediaType.ToString() == "application/xml" ||
+                                                     m.MediaType.ToString() == "text/xml")
+                                         .Count() > 0)
+                            .ToList();
+            foreach (var match in matches)
+                config.Formatters.Remove(match);  
         }
     }
 }

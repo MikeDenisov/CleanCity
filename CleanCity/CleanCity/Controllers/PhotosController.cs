@@ -7,7 +7,6 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
-using CleanCity.Data;
 using CleanCity.Models;
 using Newtonsoft.Json;
 
@@ -15,56 +14,8 @@ namespace CleanCity.Controllers
 {
     public class PhotosController : ApiController
     {
-        private const string ServerUploadFolder = "c:\\tmp\\uploads";
-        private readonly IGenericRepository<GarbagePoint> garbagePointRepository = new GenericRepository<GarbagePoint>(new DataContext());
-        private readonly IGenericRepository<Photo> photoRepository = new GenericRepository<Photo>(new DataContext());
-
-        //[HttpPost]
-        //[Route("api/garbagePoints/{garbagePointId}/photo")]
-        //public async Task<IEnumerable<Photo>> UploadPhoto(int garbagePointId)
-        //{
-        //    // Verify that this is an HTML Form file upload request
-        //    if (!Request.Content.IsMimeMultipartContent("form-data"))
-        //    {
-        //        throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.UnsupportedMediaType));
-        //    }
-
-        //    var garbagePoint = garbagePointRepository.GetById(garbagePointId);
-
-        //    if (garbagePoint == null)
-        //        throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
-
-            
-        //    // Create a stream provider for setting up output streams
-        //    var streamProvider = new MultipartFormDataStreamProvider(ServerUploadFolder);
-
-        //    // Read the MIME multipart asynchronously content using the stream provider we just created.
-        //    await Request.Content.ReadAsMultipartAsync(streamProvider);
-
-        //    var result = new List<Photo>();
-        //    foreach (var file in streamProvider.FileData)
-        //    {
-        //        var info = new FileInfo(file.LocalFileName);
-        //        var fileId = Convert.ToInt32((from h in file.Headers where h.Key == "id" select h.Value.First()).FirstOrDefault());
-        //        var actualFileName = (from h in file.Headers where h.Key == "ActualFileName" select h.Value.First()).FirstOrDefault();
-        //        var path = Path.GetFileName(file.LocalFileName);
-        //        var newPhoto = new Photo()
-        //        {
-        //            Target = garbagePoint,
-        //            ActualFileName = actualFileName,
-        //            FilePath = file.LocalFileName
-        //        };
-        //        photoRepository.Add(newPhoto);
-        //        result.Add(newPhoto);
-        //    }
-
-        //    photoRepository.Save();
-
-        //    return result;
-        //}
-
         [HttpPost] // This is from System.Web.Http, and not from System.Web.Mvc
-        [Route("api/garbagePoints/{garbagePointId}/photo")]
+        [Route("api/photos")]
         public async Task<HttpResponseMessage> Upload()
         {
             if (!Request.Content.IsMimeMultipartContent())
@@ -85,7 +36,7 @@ namespace CleanCity.Controllers
 
             // Remove this line as well as GetFormData method if you're not
             // sending any form data with your upload request
-            var fileUploadObj = GetFormData(result);
+            var fileUploadObj = GetFormData<UploadPhotoDataModel>(result);
 
             // Through the request response you can return an object to the Angular controller
             // You will be able to access this in the .success callback through its data attribute
@@ -107,14 +58,14 @@ namespace CleanCity.Controllers
         }
 
         // Extracts Request FormatData as a strongly typed model
-        private object GetFormData(MultipartFormDataStreamProvider result)
+        private object GetFormData<T>(MultipartFormDataStreamProvider result)
         {
             if (result.FormData.HasKeys())
             {
                 var unescapedFormData = Uri.UnescapeDataString(result.FormData
                     .GetValues(0).FirstOrDefault() ?? String.Empty);
                 if (!String.IsNullOrEmpty(unescapedFormData))
-                    return JsonConvert.DeserializeObject(unescapedFormData);
+                    return JsonConvert.DeserializeObject<T>(unescapedFormData);
             }
 
             return null;
